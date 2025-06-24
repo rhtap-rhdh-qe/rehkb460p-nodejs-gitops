@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: rehkb460p-nodejs
+  janus-idp.io/tekton: rehkb460p-nodejs
+  backstage.io/kubernetes-id: rehkb460p-nodejs
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: rehkb460p-nodejs
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
